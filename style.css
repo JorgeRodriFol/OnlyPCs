@@ -1,0 +1,79 @@
+body {
+  width: 100vw;
+  margin: 0;
+}
+
+.parent {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 7fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.menuTop {
+  z-index: 10;
+  height: 11vh;
+  grid-area: 1 / 1 / 2 / 3;
+  border-bottom: 1px solid #09f;
+  background: linear-gradient(
+      270deg,
+      rgba(204, 0, 255, 0.35) 0.01%,
+      rgba(0, 0, 0, 0.2) 3.65%,
+      rgba(0, 0, 0, 0.2) 96.35%,
+      rgba(204, 0, 255, 0.35) 100%
+    ),
+    linear-gradient(
+      180deg,
+      #09f -15.31%,
+      #000 21.8%,
+      #02060b 83.67%,
+      #09f 116.67%
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.search-container {
+  text-align: center;
+  display: flex;
+}
+
+input[type="text"] {
+  padding: 3%;
+  width: 15vw;
+  border-radius: 50px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  outline: none;
+  background: #d9d9d9;
+}
+
+input[type="text"]:hover,
+input[type="text"]:active {
+  background: #f3f2f2;
+}
+
+button {
+  border-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  cursor: pointer;
+  border-left: solid black 0.1em;
+  background: #d9d9d9;
+}
+button:hover {
+  background: #f3f2f2;
+}
+
+.log_in {
+  font-family: GlichInside;
+}
+
+.log_in a {
+  color: white;
+  text-decoration: none;
+}
