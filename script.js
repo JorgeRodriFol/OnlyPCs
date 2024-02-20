@@ -1,3 +1,5 @@
+llamarAJAX("");
+
 var busqueda = document.querySelector(".buscar");
 busqueda.addEventListener("input", function () {
   llamarAJAX(document.querySelector(".buscar").value);
@@ -42,7 +44,7 @@ function llamarAJAX(input) {
 }
 
 function mostrarProductos(productos) {
-  var body = document.querySelector(".body");
+  var body = document.querySelector(".productos");
   productos = JSON.parse(productos);
   body.innerHTML = "";
   for (var i = 0; i < productos.length; i++) {
@@ -52,8 +54,11 @@ function mostrarProductos(productos) {
     var precio = document.createElement("p");
     precio.innerHTML = productos[i][2];
     producto.className = "producto";
+    var button = document.createElement("button");
+    button.textContent = "Comprar";
     producto.appendChild(nombre);
     producto.appendChild(precio);
+    producto.appendChild(button);
     body.appendChild(producto);
   }
 }

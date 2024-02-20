@@ -77,3 +77,45 @@ button:hover {
   color: white;
   text-decoration: none;
 }
+
+.body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inventario {
+  border: solid black 0.2em;
+  width: 50vw;
+}
+
+.inventario > h1 {
+  width: 100%;
+  text-align: center;
+  background-color: #09f;
+  margin: 0px;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  border-bottom: solid black 0.1em;
+}
+
+.productos {
+  width: 100%;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15vw;
+  background-color: #000;
+  color: white;
+  border: solid white 0.1em;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.producto * {
+  width: 33%;
+}
