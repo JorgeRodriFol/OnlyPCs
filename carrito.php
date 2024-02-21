@@ -11,10 +11,6 @@
 <body>
     <div class="parent">
         <div class="menuTop">
-            <div class="search-container">
-                <input class="buscar" type="text" placeholder="Buscar..." />
-                <button type="submit">Buscar</button>
-            </div>
             <div class="inicio">
                 <a href="./index.php">
                     <h3>Inicio</h3>
