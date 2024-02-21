@@ -10,7 +10,7 @@
 <body>
   <div class="parent">
     <div class="menuTop">
-      <div class="log_in">
+      <div class="inicio">
         <a href="./index.php">
           <h3>Inicio</h3>
         </a>

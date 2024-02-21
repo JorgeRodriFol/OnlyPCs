@@ -69,14 +69,13 @@ button:hover {
   background: #f3f2f2;
 }
 
-.carrito {
-  height: 6vh;
-  margin-right: 5vw;
+.inicio {
+  font-family: GlichInside;
 }
 
-.carrito > img {
-  height: 6vh;
-  object-fit: contain;
+.inicio a {
+  color: white;
+  text-decoration: none;
 }
 
 .log_in {

@@ -54,11 +54,25 @@ function mostrarProductos(productos) {
     var precio = document.createElement("p");
     precio.innerHTML = productos[i][2];
     producto.className = "producto";
+    producto.id = nombre.textContent;
     var button = document.createElement("button");
-    button.textContent = "Comprar";
+    button.textContent = "Añadir al carrito";
+    button.addEventListener("click", addCarrito(nombre.textContent));
     producto.appendChild(nombre);
     producto.appendChild(precio);
     producto.appendChild(button);
     body.appendChild(producto);
   }
+}
+
+function addCarrito(nombreProducto) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      mostrarProductos(this.responseText);
+    }
+  };
+  xhttp.open("POST", "recogida.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send(input);
 }
