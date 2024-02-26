@@ -23,11 +23,11 @@
             </div>
         </div>
         <div class="body">
-
+        <div class="productos"></div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="carrito.js"></script>
 </body>
 
 </html>

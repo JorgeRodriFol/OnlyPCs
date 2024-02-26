@@ -2,7 +2,7 @@
 $producto = $_POST['producto'];
 $cliente = $_COOKIE['nombreCliente'];
 $con = new mysqli("localhost", "root", "", "OnlyPCs");
-$consulta = "SELECT * FROM Productos WHERE nombre = '$producto'";
+$consulta = "SELECT * FROM Productos WHERE id = '$producto'";
 echo $consulta;
 $result = $con->query($consulta);
 if ($result->num_rows > 0) {
@@ -12,7 +12,8 @@ if ($result->num_rows > 0) {
     $result = $con->query($consulta);
     if ($result->num_rows > 0) {
         $productoCarrito = $result->fetch_assoc();
-        $update = "UPDATE Carrito SET cantidad = " . $productoCarrito['cantidad']++ . " WHERE id_Producto = '" . $arryaProductos['id'] . "' && nombre_Usuario = '$cliente'";
+        print_r($productoCarrito['cantidad']);
+        $update = "UPDATE Carrito SET cantidad = " . ++$productoCarrito['cantidad'] . " WHERE id_Producto = '" . $arryaProductos['id'] . "' && nombre_Usuario = '$cliente'";
         $result = $con->query($update);
         if ($result) {
             echo "Cantidad actualizada";
