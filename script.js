@@ -34,18 +34,22 @@ function mostrarProductos(productos) {
     button.textContent = "Añadir al carrito";
     button.className = productos[i][0];
     button.addEventListener("click", function () {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          console.log(this.response);
-        }
-      };
-      xhttp.open("POST", "addCarrito.php", true);
-      xhttp.setRequestHeader(
-        "Content-type",
-        "application/x-www-form-urlencoded"
-      );
-      xhttp.send("producto=" + this.className);
+      if (document.cookie === null || document.cookie === "") {
+        alert("Debes registrarte");
+      } else {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            console.log(this.response);
+          }
+        };
+        xhttp.open("POST", "addCarrito.php", true);
+        xhttp.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        );
+        xhttp.send("producto=" + this.className);
+      }
     });
     producto.appendChild(nombre);
     producto.appendChild(precio);
