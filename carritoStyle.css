@@ -1,12 +1,14 @@
 body {
   width: 100vw;
   margin: 0;
+  background: url(background.png), lightgray 0% 0% / 50px 50px repeat;
 }
 
 .parent {
   width: 100vw;
   height: 100vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: 1fr 9fr;
   grid-template-rows: 1fr 7fr;
   grid-column-gap: 0px;
@@ -16,7 +18,7 @@ body {
 .menuTop {
   z-index: 10;
   height: 11vh;
-  grid-area: 1 / 1 / 2 / 3;
+  width: 100vw;
   border-bottom: 1px solid #09f;
   background: linear-gradient(
       270deg,
@@ -89,6 +91,7 @@ button:hover {
 
 .body {
   width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,14 +113,19 @@ button:hover {
 }
 
 .productos {
-  width: 100%;
+  width: 75vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 .producto {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15vw;
+  gap: 2vw;
   background-color: #000;
   color: white;
   border: solid white 0.1em;
@@ -127,4 +135,8 @@ button:hover {
 
 .producto * {
   width: 33%;
+}
+
+.productos > h3 {
+  text-align: center;
 }
