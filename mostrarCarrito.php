@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
     }
     echo json_encode($lista);
 } else {
-    echo "No se encontraron registros en la base de datos.";
+    echo json_encode("No se han añadido productos");
 }
 
 $con->close();

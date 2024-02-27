@@ -8,7 +8,7 @@ if ($result->num_rows > 0) {
     $productos = $result->fetch_all();
     $nuevaCantidad = $productos[0][2] - $_POST['cantidad'];
     echo $nuevaCantidad;
-    if ($nuevaCantidad < 1) {
+    if ($nuevaCantidad < 1 || !is_int($_POST['cantidad'])) {
         $delete = "DELETE FROM Carrito WHERE nombre_Usuario = '$cliente' AND id_Producto = $producto";
         print_r($delete);
         $result = $con->query($delete);
